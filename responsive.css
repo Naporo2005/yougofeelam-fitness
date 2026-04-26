@@ -1,0 +1,63 @@
+/* =========================
+   DESKTOP (no hamburger)
+   ========================= */
+@media (min-width: 768px) {
+
+    /* remove hamburger */
+    .hamburger {
+        display: none;
+    }
+
+    /* fix left layout */
+    .left {
+        width: auto;
+        gap: 20px;
+    }
+
+    /* show nav inline */
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        transition: none;
+    }
+
+    /* ensure it's always visible */
+    .nav-links {
+        right: 0;
+    }
+
+    /* remove overlay behavior */
+    .overlay {
+        display: none !important;
+    }
+
+    /* style links for desktop */
+    .nav-links a {
+        font-size: 16px;
+        position: relative;
+    }
+
+    /* nice hover underline effect */
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background: black;
+        transition: 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+}
